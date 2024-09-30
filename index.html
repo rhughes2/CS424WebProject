@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Template</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-        <title>CS424 Web Project</title>
-    </head>
+    <main>
+        <section id="home">
+            <h2>Home Section</h2>
+            <p>This is where the home content goes. You can add images, articles, and more!</p>
+        </section>
 
-    <body>
-        <h3>Hello!</h3>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Describe your project or website here! Make it engaging.</p>
+        </section>
 
-        <p>This is the start of our web project! How exciting!</p>
-    </body>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Our Website | All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
