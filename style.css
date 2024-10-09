@@ -14,8 +14,15 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+#icon {
+    margin-right: 10px;
 }
 
 nav ul {
@@ -39,6 +46,41 @@ main {
 
 section {
     margin-bottom: 40px;
+}
+
+#home {
+    text-align: center;
+}
+
+h2 {
+    font-size: xx-large;
+}
+
+#blurb {
+    text-align: justify;
+    padding: 0% 25% 25px;
+}
+
+.about1{
+    text-align: justify;
+    display: flex;
+    width: 50%;
+}
+
+#about {
+    
+    align-items: center;
+
+}
+
+#result {
+
+    text-align: center;
+}
+
+#total-display {
+
+    font-size: xx-large;
 }
 
 footer {
@@ -68,7 +110,7 @@ form input, form textarea {
     width: 100%;
 }
 
-form button {
+button {
     padding: 10px;
     background-color: #333;
     color: #fff;
@@ -76,6 +118,6 @@ form button {
     cursor: pointer;
 }
 
-form button:hover {
+button:hover {
     background-color: #555;
 }

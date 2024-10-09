@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Caffiene.me: Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="./index.html"><img id="icon" src="./media/temp-icon.png" width="50" height="50"/></a>
+        <h1>Caffiene.me</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./calc.html">Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <br><br>
+        <h2>Whatcha Drinking?</h2>
+        <br><br>
+
+    <div id="dropdown-container">
+        <label for="item-list">Choose a drink:</label>
+        <select class="item-list">
+            <option value="10">Drink 1</option>
+            <option value="20">Drink 2</option>
+            <option value="30">Drink 3</option>
+        </select>
+    </div>
+
+    <br><br>
+    <button onclick="addDropdown()">Add Another Drink</button>
+    <button onclick="goToResultsPage()">Go to Results Page</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Caffiene.me</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

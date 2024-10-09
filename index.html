@@ -4,33 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Simple Template</title>
+    <title>Caffiene.me</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Our Website</h1>
+        <a href="./index.html"><img id="icon" src="./media/temp-icon.png" width="50" height="50"/></a>
+        <h1>Caffiene.me</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./calc.html">Calculator</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <br><br>
         <section id="home">
-            <h2>Home Section</h2>
-            <p>This is where the home content goes. You can add images, articles, and more!</p>
+            <h2>Energy By Numbers</h2>
+            <br><br>
+            <p id="blurb">In today’s fast paced world, it seems like everyone is drinking copious amounts of caffeine. From pumpkin spiced lattes, 
+                to pre workout supplements, to big gulp diet sodas, it becomes harder and harder to actually tell how much of the stuff you 
+                are consuming. That's where we come in. Come use are Caffiene Calculator to see how much you have been drinking!</p>
+                <a href="calc.html"><button class="btn">Get Started</button></a>
         </section>
+
+        <br><br>
 
         <section id="about">
-            <h2>About Us</h2>
-            <p>Describe your project or website here! Make it engaging.</p>
+            <h2>How it works</h2>
+            <p class="about1">We know the Caffeine content of all your favorite drinks so you don't have too! Just select the drink you had today,
+                then add another to the list. Once you submit we'll calculate the total and show you just how much caffeine you've had!
+            </p>
+            <!-- <img class="about1" src="./media/graphic.jpeg" /> -->
         </section>
 
-        <section id="contact">
+<!--         <section id="contact">
             <h2>Contact Us</h2>
             <form id="contact-form">
                 <label for="name">Name:</label>
@@ -44,11 +54,11 @@
 
                 <button type="submit">Send</button>
             </form>
-        </section>
+        </section> -->
     </main>
 
     <footer>
-        <p>&copy; 2024 Our Website | All rights reserved.</p>
+        <p>&copy; 2024 Caffiene.me</p>
     </footer>
 
     <script src="script.js"></script>
