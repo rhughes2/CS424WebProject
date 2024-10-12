@@ -1,19 +1,26 @@
+var images = {
+    "Diet Coke": "./media/diet-coke.png",
+    "Coffee": "./media/coffee.png",
+    "C4 Energy": "./media/c4.png"
+};
+        
         // Function to add a new dropdown dynamically
+        let dropdownCount = 1;  // Start from 1 because the first dropdown is already created
         function addDropdown() {
             var dropdownContainer = document.getElementById("dropdown-container");
 
-            // Create a new label and dropdown select element
             var newLabel = document.createElement("label");
-            newLabel.innerText = "Choose a drink: ";
+            newLabel.innerText = "Choose an item:";
 
             var newSelect = document.createElement("select");
-            newSelect.className = "item-list";
+            newSelect.id = "item-list-" + dropdownCount;
+            newSelect.setAttribute("onchange", "updateImage(" + dropdownCount + ")");
 
-            // Add options to the new dropdown
+            // Add options to the new dropdown, PLEASE EDIT TO BE ACTAUL VALUES
             var options = [
-                {text: "Drink 1", value: 10},
-                {text: "Drink 2", value: 20},
-                {text: "Drink 3", value: 30}
+                {text: "Diet Coke", value: 10},
+                {text: "Coffee", value: 20},
+                {text: "C4 Energy", value: 30}
             ];
 
 
@@ -24,15 +31,27 @@
                 newSelect.add(optionElement);
             });
 
-            // Add the new label and dropdown to the container
-            dropdownContainer.appendChild(document.createElement("br")); // Adds a line break for spacing
+            // Create a new image for this dropdown
+            var newImage = document.createElement("img");
+            newImage.id = "item-image-" + dropdownCount;
+            newImage.className = "item-image";
+            newImage.src = "";
+
+            // Add the new label, select, and image to the container
+            dropdownContainer.appendChild(document.createElement("br"));  // Line break for spacing
             dropdownContainer.appendChild(newLabel);
             dropdownContainer.appendChild(newSelect);
+            dropdownContainer.appendChild(newImage);
+
+            updateImage(dropdownCount);
+
+            // Increment the dropdown count for the next one
+            dropdownCount++;
         }
 
 
          // Function to calculate the total and pass it to the next page via URL
-         function goToResultsPage() {
+        function goToResultsPage() {
             var dropdowns = document.getElementsByClassName("item-list");
             var total = 0;
 
@@ -45,12 +64,36 @@
             window.location.href = "results.html?total=" + total;
         }
 
-                // Function to get URL parameters
-                function getQueryParameter(name) {
+        // Function to get URL parameters
+        function getQueryParameter(name) {
                     const urlParams = new URLSearchParams(window.location.search);
                     return urlParams.get(name);
-                }
+         }
+
+        // Function to update the image based on selected item for a specific dropdown
+        function updateImage(index) {
+            var itemList = document.getElementById("item-list-" + index);
+            
+            // Get the text of the selected option
+            var selectedItem = itemList.options[itemList.selectedIndex].text;
+            var itemImage = document.getElementById("item-image-" + index);
+
+            console.log("Selected item (text):", selectedItem);
+            console.log("Image path being set:", images[selectedItem]);
+
+            // Set the image source to the corresponding image URL
+            if (images[selectedItem]) {
+                itemImage.src = images[selectedItem];  // Set the correct image
+                console.log("Image src after update:", itemImage.src);
+            } else {
+                itemImage.src = '';  // Clear image if item not found
+            }
+        }
+        // Initialize the first image on page load
+        window.onload = function() {
+            updateImage(0);
+        };
         
-                // Display the total from the URL
-                var totalValue = getQueryParameter("total");
-                document.getElementById("total-display").innerText = totalValue;
+        // Display the total from the URL
+        var totalValue = getQueryParameter("total");
+        document.getElementById("total-display").innerText = totalValue;

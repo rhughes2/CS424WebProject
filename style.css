@@ -83,6 +83,12 @@ h2 {
     font-size: xx-large;
 }
 
+.item-image {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+
 footer {
     background-color: #333;
     color: #fff;

@@ -25,12 +25,14 @@
         <br><br>
 
     <div id="dropdown-container">
-        <label for="item-list">Choose a drink:</label>
-        <select class="item-list">
-            <option value="10">Drink 1</option>
-            <option value="20">Drink 2</option>
-            <option value="30">Drink 3</option>
+        <label for="item-list-0">Choose a drink:</label>
+        <select id="item-list-0"  onchange="updateImage(0)">
+            <option value="10">Diet Coke</option>
+            <option value="20">Coffee</option>
+            <option value="30">C4 Energy</option>
         </select>
+            <!-- Image Display -->
+        <img id="item-image-0" class= "item-image" src="./media/diet-coke.png" alt="Item Image" />
     </div>
 
     <br><br>
