@@ -14,6 +14,7 @@ var images = {
 
             var newSelect = document.createElement("select");
             newSelect.id = "item-list-" + dropdownCount;
+            newSelect.className = "item-list";
             newSelect.setAttribute("onchange", "updateImage(" + dropdownCount + ")");
 
             // Add options to the new dropdown, PLEASE EDIT TO BE ACTAUL VALUES
