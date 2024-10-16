@@ -10,7 +10,7 @@ var images = {
             var dropdownContainer = document.getElementById("dropdown-container");
 
             var newLabel = document.createElement("label");
-            newLabel.innerText = "Choose an item:";
+            newLabel.innerText = "Choose a drink:";
 
             var newSelect = document.createElement("select");
             newSelect.id = "item-list-" + dropdownCount;
