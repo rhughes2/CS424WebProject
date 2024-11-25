@@ -156,3 +156,70 @@ button {
 button:hover {
     background-color: var(--button-hover);
 }
+
+
+/* Item Image Styling */
+.item-image {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+/* Dropdown Container Styling */
+#dropdown-container {
+    margin-bottom: 20px;
+}
+
+#dropdown-container label {
+    color: var(--text-color); 
+}
+
+#dropdown-container select {
+    padding: 10px;
+    border: 1px solid var(--form-border); /* Light Orange Border */
+    border-radius: 5px;
+    background-color: #fff;
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+#dropdown-container select:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid var(--form-border); /* Light Orange Border */
+    border-radius: 5px;
+    width: 100%;
+    background-color: #fff; /* White Background for Inputs */
+    color: var(--text-color);
+}
+
+form input:focus, form textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+/* Result Styling */
+#result {
+    text-align: center;
+}
+
+#total-display {
+    font-size: xx-large;
+    color: var(--text-color);
+}
