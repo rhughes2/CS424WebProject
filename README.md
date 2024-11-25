@@ -1,15 +1,15 @@
 # Caffiene.me
-A web appthe calculates total caffiene of drinks
+A web app that calculates total caffiene of drinks
 
 ## Must TODO
-- Add Graphics to homepage, drinks, and results page
+- Continue to hone in on style (fonts, nav bar, etc)
+- Add transitional animations
+- Add Graphics to drinks, and results page
 - Change to brighter color pallet
-- Add real life drinks and values
-- Clean up text
-- Redesgin Logo
+- Double check drinks and values
 
 ### Maybe TODO
-  - Add Login Support for saving daily results
+  - Add Login Support
   - Add Mounthly recap email to accounts
   - Add database to dymanically update drink list
   - Add abilty to share total socre on social media
