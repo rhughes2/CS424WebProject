@@ -4,33 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Caffiene.me</title>
+    <title>Caffeine.me</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <a href="./index.html"><img id="icon" src="./media/temp-icon.png" width="50" height="50" /></a>
-        <h1>Caffeine.me</h1>
         <nav>
             <ul>
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./calc.html">Calculator</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="calc.html">Calculator</a></li>
+                <li><a href="#login">Login</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <br><br>
-        <section id="home">
-            <h2>Energy By Numbers</h2>
-            <br><br>
-            <p id="blurb">"As life speeds up, many people find themselves relying on caffeine more than ever. 
-                With everything from pumpkin-spiced lattes to energy drinks and sugary sodas available at our fingertips, keeping track of your caffeine 
-                intake can be overwhelming. Enter our Caffeine Calculator! 
-                Discover just how much caffeine you're drinking and take control of your consumption."</p>
-                <a href="calc.html"><button class="btn">Get Started</button></a>
+        <div id="site-title" class="site-title-body">Caffeine.me</div>
+        <section id="home" class="hero">
+            <h2>WHATCHA DRINKING?</h2>
+            <a href="calc.html"><button class="btn hero-btn">CALCULATOR</button></a>
         </section>        
-        <br><br>
 
         <section id="about">
             <h2>How it works?</h2>
@@ -38,30 +33,11 @@
                 Simply select the drinks you consumed today, add them to your list, and hit submit. 
                 We’ll calculate your total caffeine intake and show you exactly how much you’ve had!"
             </p>
-            <!-- <img class="about1" src="./media/graphic.jpeg" /> -->
         </section>
-
-<!--         <section id="contact">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send</button>
-            </form>
-        </section> -->
     </main>
 
     <footer>
         <p>&copy; 2024 Caffeine.me</p>
     </footer>
-
-    <!-- <script src="script.js"></script> -->
 </body>
 </html>
