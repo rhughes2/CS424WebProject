@@ -5,7 +5,7 @@ var images = {
 };
         
         // Function to add a new dropdown dynamically
-        let dropdownCount = 1;  // Start from 1 because the first dropdown is already created
+        let dropdownCount = 0;  // Start from 1 because the first dropdown is already created
         function addDropdown() {
             var dropdownContainer = document.getElementById("dropdown-container");
 
@@ -17,11 +17,18 @@ var images = {
             newSelect.className = "item-list";
             newSelect.setAttribute("onchange", "updateImage(" + dropdownCount + ")");
 
-            // Add options to the new dropdown, PLEASE EDIT TO BE ACTAUL VALUES
+            // Add options to the new dropdown, PLEASE DOUBLE CHECK VALUES
             var options = [
-                {text: "Diet Coke", value: 10},
-                {text: "Coffee", value: 20},
-                {text: "C4 Energy", value: 30}
+                {text: "Coffee", value: 95},
+                {text: "Espresso", value: 63},
+                {text: "Black Tea", value: 47},
+                {text: "Green Tea", value: 28},
+                {text: "Pepsi", value: 38},
+                {text: "Coca-Cola", value: 34},
+                {text: "Diet Coke", value: 46},
+                {text: "Red Bull", value: 80},
+                {text: "Monster Energy", value: 160},
+                {text: "Mountain Dew (Big Gulp)", value: 135}
             ];
 
 
@@ -65,11 +72,7 @@ var images = {
             window.location.href = "results.html?total=" + total;
         }
 
-        // Function to get URL parameters
-        function getQueryParameter(name) {
-                    const urlParams = new URLSearchParams(window.location.search);
-                    return urlParams.get(name);
-         }
+
 
         // Function to update the image based on selected item for a specific dropdown
         function updateImage(index) {
@@ -92,9 +95,7 @@ var images = {
         }
         // Initialize the first image on page load
         window.onload = function() {
+            addDropdown();
             updateImage(0);
         };
         
-        // Display the total from the URL
-        var totalValue = getQueryParameter("total");
-        document.getElementById("total-display").innerText = totalValue;
