@@ -11,6 +11,5 @@ A web app that calculates total caffiene of drinks
 ### Maybe TODO
   - Add Login Support
   - Add Mounthly recap email to accounts
-  - Add database to dymanically update drink list
   - Add abilty to share total socre on social media
 

@@ -5,57 +5,52 @@ var images = {
 };
         
         // Function to add a new dropdown dynamically
-        let dropdownCount = 0;  // Start from 1 because the first dropdown is already created
+        let dropdownCount = 0;
         function addDropdown() {
             var dropdownContainer = document.getElementById("dropdown-container");
-
+        
             var newLabel = document.createElement("label");
             newLabel.innerText = "Choose a drink:";
-
+        
             var newSelect = document.createElement("select");
             newSelect.id = "item-list-" + dropdownCount;
             newSelect.className = "item-list";
             newSelect.setAttribute("onchange", "updateImage(" + dropdownCount + ")");
+        
+            // Fetch data and populate options
+            fetch('./drinks.json')
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(function(item) {
+            var optionElement = document.createElement("option");
+            optionElement.value = item.value;
+            optionElement.text = item.text;
+            newSelect.add(optionElement);
+        });
 
-            // Add options to the new dropdown, PLEASE DOUBLE CHECK VALUES
-            var options = [
-                {text: "Coffee", value: 95},
-                {text: "Espresso", value: 63},
-                {text: "Black Tea", value: 47},
-                {text: "Green Tea", value: 28},
-                {text: "Pepsi", value: 38},
-                {text: "Coca-Cola", value: 34},
-                {text: "Diet Coke", value: 46},
-                {text: "Red Bull", value: 80},
-                {text: "Monster Energy", value: 160},
-                {text: "Mountain Dew (Big Gulp)", value: 135}
-            ];
+        // Add the populated dropdown to the container
+        dropdownContainer.appendChild(document.createElement("br")); // Line break
+        dropdownContainer.appendChild(newLabel);
+        dropdownContainer.appendChild(newSelect);
 
+        // Create and add a new image for this dropdown
+        var newImage = document.createElement("img");
+        newImage.id = "item-image-" + dropdownCount;
+        newImage.className = "item-image";
+        newImage.src = "";
+        dropdownContainer.appendChild(newImage);
 
-            options.forEach(function(item) {
-                var optionElement = document.createElement("option");
-                optionElement.value = item.value;
-                optionElement.text = item.text;
-                newSelect.add(optionElement);
-            });
+        // Call updateImage after dropdown is fully created
+        updateImage(dropdownCount); // Initialize the image
+        // Increment the dropdown count for the next one
+        dropdownCount++;
+    })
+    .catch(error => console.error('Error loading JSON:', error));
 
-            // Create a new image for this dropdown
-            var newImage = document.createElement("img");
-            newImage.id = "item-image-" + dropdownCount;
-            newImage.className = "item-image";
-            newImage.src = "";
-
-            // Add the new label, select, and image to the container
-            dropdownContainer.appendChild(document.createElement("br"));  // Line break for spacing
-            dropdownContainer.appendChild(newLabel);
-            dropdownContainer.appendChild(newSelect);
-            dropdownContainer.appendChild(newImage);
-
-            updateImage(dropdownCount);
-
-            // Increment the dropdown count for the next one
-            dropdownCount++;
+        
+            
         }
+        
 
 
          // Function to calculate the total and pass it to the next page via URL
@@ -76,7 +71,9 @@ var images = {
 
         // Function to update the image based on selected item for a specific dropdown
         function updateImage(index) {
+            console.log("Looking for element:", "item-list-" + index);
             var itemList = document.getElementById("item-list-" + index);
+            
             
             // Get the text of the selected option
             var selectedItem = itemList.options[itemList.selectedIndex].text;
@@ -99,3 +96,4 @@ var images = {
             updateImage(0);
         };
         
+
