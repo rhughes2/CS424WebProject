@@ -29,7 +29,7 @@ body {
     z-index: -1;
 }
 
-.navbar {
+nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -40,22 +40,8 @@ body {
     padding: 10px 20px;
 }
 
-.navbar-left, .navbar-center, .navbar-right {
-    display: flex;
-    align-items: center;
-}
 
-.navbar-left .icon {
-    font-size: 24px;
-    color: lightgoldenrodyellow;
-}
-
-.navbar-center {
-    flex-grow: 1;
-    justify-content: center;
-}
-
-.nav-button {
+nav button {
     background: transparent;
     color: lightgoldenrodyellow;
     border: none;
@@ -64,27 +50,25 @@ body {
     cursor: pointer;
 }
 
-.nav-button:hover {
+nav button:hover {
     text-decoration: underline;
 }
 
-.main-content {
+
+h1 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: lightgoldenrodyellow;
-}
-
-h1 {
     font-family: 'Oswald', sans-serif; 
     font-size: 180px;
     margin-bottom: 185px;
     font-weight: bold;
 }
 
-.bottom-left {
+section {
     position: absolute;
     font-family: 'Andada Pro', serif;
     left: 20px;
@@ -92,17 +76,14 @@ h1 {
     color: lightgoldenrodyellow;
 }
 
-.bottom-left-text h2 {
+h2 {
     font-size: 54px;
     margin-bottom: 60px;
     margin-left: 40px;
 }
 
-.bottom-left-button {
-    margin-left: 10px;
-}
 
-.calculator-button {
+section button {
     padding: 10px 20px;
     background-color: white;
     color: black;
@@ -110,19 +91,10 @@ h1 {
     cursor: pointer;
     font-size: 18px;
     margin-bottom: 45px;
-    margin-left: 15px;
+    margin-left: 55px;
 }
 
-.calculator-button:hover {
+section button:hover {
     background-color: black;
-    color: white;
-}
-
-.custom-icon {
-    width: 40px;
-    height: 40px;
-    background-image: url('media/www.png');
-    background-size: cover;
-    display: inline-block;
     color: white;
 }
