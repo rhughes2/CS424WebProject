@@ -1,7 +1,15 @@
 var images = {
     "Diet Coke": "./media/diet-coke.png",
     "Coffee": "./media/coffee.png",
-    "C4 Energy": "./media/c4.png"
+    "C4 Energy": "./media/c4.png",
+    "Espresso": "./media/espresso.png",
+    "Black Tea": "./media/black-tea.png",
+    "Green Tea": "./media/green-tea.png",
+    "Pepsi": "./media/pepsi.png",
+    "Coca-Cola": "./media/coca-cola.png",
+    "Red Bull": "./media/red-bull.png",
+    "Monster Energy": "./media/monster.png",
+    "Mountain Dew (Big Gulp)": "./media/big-gulp.png"
 };
         
         // Function to add a new dropdown dynamically
