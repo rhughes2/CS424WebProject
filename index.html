@@ -3,41 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Caffeine.me</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ani.css">
+    <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="./index.html"><img id="icon" src="./media/temp-icon.png" width="50" height="50" /></a>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="calc.html">Calculator</a></li>
-                <li><a href="#login">Login</a></li>
-            </ul>
+    <div class="background-container">
+        <div class="blur-background"></div>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <i class="custom-icon"></i>
+            </div>
+            <div class="navbar-center">
+                <button class="nav-button">HOME</button>
+                <button class="nav-button">ABOUT</button>
+                <button class="nav-button">CALCULATOR</button>
+            </div>
+            <div class="navbar-right">
+                <button class="nav-button">LOGIN</button>
+            </div>
         </nav>
-    </header>
-
-    <main>
-        <div id="site-title" class="site-title-body">Caffeine.me</div>
-        <section id="home" class="hero">
-            <h2>WHATCHA DRINKING?</h2>
-            <a href="calc.html"><button class="btn hero-btn">CALCULATOR</button></a>
-        </section>        
-
-        <section id="about">
-            <h2>How it works?</h2>
-            <p class="about1">"We’ve done the research on the caffeine content of all your favorite drinks, so you don’t have to! 
-                Simply select the drinks you consumed today, add them to your list, and hit submit. 
-                We’ll calculate your total caffeine intake and show you exactly how much you’ve had!"
-            </p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Caffeine.me</p>
-    </footer>
+        <div class="main-content">
+            <h1>Caffeine.me</h1>
+        </div>
+        <div class="bottom-left">
+            <div class="bottom-left-text">
+                <h2><i>Whatcha Drinking?</i></h2>
+            </div>
+            <div class="bottom-left-button">
+                <button class="calculator-button">Calculator</button>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
