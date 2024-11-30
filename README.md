@@ -2,10 +2,9 @@
 A web app that calculates total caffiene of drinks
 
 ## Must TODO
-- Continue to hone in on style (fonts, nav bar, etc)
+- Reconsider Data Storage
 - Add transitional animations
-- Add Graphics to drinks, and results page
-- Change to brighter color pallet
+- Add Graphics to results page
 - Double check drinks and values
 
 ### Maybe TODO
