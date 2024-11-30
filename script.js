@@ -7,52 +7,51 @@ var images = {
         // Function to add a new dropdown dynamically
         let dropdownCount = 0;
         function addDropdown() {
-            var dropdownContainer = document.getElementById("dropdown-container");
+            console.log(dropdownCount);
+            if (dropdownCount < 5)
+            {
+                var dropdownContainer = document.getElementById("dropdown-container");
         
-            var newLabel = document.createElement("label");
-            newLabel.innerText = "Choose a drink:";
-        
-            var newSelect = document.createElement("select");
-            newSelect.id = "item-list-" + dropdownCount;
-            newSelect.className = "item-list";
-            newSelect.setAttribute("onchange", "updateImage(" + dropdownCount + ")");
-        
-            // Fetch data and populate options
-            fetch('./drinks.json')
-    .then(response => response.json())
-    .then(data => {
-        data.forEach(function(item) {
-            var optionElement = document.createElement("option");
-            optionElement.value = item.value;
-            optionElement.text = item.text;
-            newSelect.add(optionElement);
-        });
-
-        // Add the populated dropdown to the container
-        dropdownContainer.appendChild(document.createElement("br")); // Line break
-        dropdownContainer.appendChild(newLabel);
-        dropdownContainer.appendChild(newSelect);
-
-        // Create and add a new image for this dropdown
-        var newImage = document.createElement("img");
-        newImage.id = "item-image-" + dropdownCount;
-        newImage.className = "item-image";
-        newImage.src = "";
-        dropdownContainer.appendChild(newImage);
-
-        // Call updateImage after dropdown is fully created
-        updateImage(dropdownCount); // Initialize the image
-        // Increment the dropdown count for the next one
-        dropdownCount++;
-    })
-    .catch(error => console.error('Error loading JSON:', error));
-
-        
+                var newLabel = document.createElement("label");
+                newLabel.innerText = "Choose a drink:";
             
+                var newSelect = document.createElement("select");
+                newSelect.id = "item-list-" + dropdownCount;
+                newSelect.className = "item-list";
+                newSelect.setAttribute("onchange", "updateImage(" + dropdownCount + ")");
+            
+                // Fetch data and populate options
+                fetch('./drinks.json')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(function(item) {
+                var optionElement = document.createElement("option");
+                optionElement.value = item.value;
+                optionElement.text = item.text;
+                newSelect.add(optionElement);
+            });
+    
+            // Add the populated dropdown to the container
+            dropdownContainer.appendChild(document.createElement("br")); // Line break
+            dropdownContainer.appendChild(newLabel);
+            dropdownContainer.appendChild(newSelect);
+    
+            // Create and add a new image for this dropdown
+            var newImage = document.createElement("img");
+            newImage.id = "item-image-" + dropdownCount;
+            newImage.className = "item-image";
+            newImage.src = "";
+            dropdownContainer.appendChild(newImage);
+    
+            // Call updateImage after dropdown is fully created
+            updateImage(dropdownCount); // Initialize the image
+            // Increment the dropdown count for the next one
+            dropdownCount++;
+        })
+        .catch(error => console.error('Error loading JSON:', error));
+            }
         }
         
-
-
          // Function to calculate the total and pass it to the next page via URL
         function goToResultsPage() {
             var dropdowns = document.getElementsByClassName("item-list");

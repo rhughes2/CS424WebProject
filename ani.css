@@ -70,16 +70,17 @@ h1 {
 
 section {
     position: absolute;
-    font-family: 'Andada Pro', serif;
     left: 20px;
     bottom: 20px;
-    color: lightgoldenrodyellow;
+
 }
 
 h2 {
     font-size: 54px;
     margin-bottom: 60px;
     margin-left: 40px;
+    color: lightgoldenrodyellow;
+    font-family: 'Andada Pro', serif;
 }
 
 
@@ -97,4 +98,69 @@ section button {
 section button:hover {
     background-color: black;
     color: white;
+}
+/* Item Image Styling */
+.item-image {
+    width: 100px;
+    height: 100px;
+}
+
+/* Dropdown Container Styling */
+#dropdown-container {
+    margin: auto;
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dropdown-container label {
+    color: lightgoldenrodyellow;
+}
+
+#dropdown-container select {
+    padding: 10px;
+    border: 1px solid var(--form-border); /* Light Orange Border */
+    border-radius: 5px;
+    background-color: #fff;
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+
+#dropdown-container select:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid var(--form-border); /* Light Orange Border */
+    border-radius: 5px;
+    width: 100%;
+    background-color: #fff; /* White Background for Inputs */
+    color: var(--text-color);
+}
+
+form input:focus, form textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+/* Result Styling */
+#result {
+    text-align: center;
+}
+
+#total-display {
+    font-size: xx-large;
+    color: var(--text-color);
 }
