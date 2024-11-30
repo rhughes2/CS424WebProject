@@ -161,6 +161,7 @@ form input:focus, form textarea:focus {
 }
 
 #total-display {
+    text-align: center;
     font-size: xx-large;
-    color: var(--text-color);
+    color: lightgoldenrodyellow;
 }
