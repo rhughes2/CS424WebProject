@@ -1,16 +1,15 @@
-var images = {
-    "Diet Coke": "./media/diet-coke.png",
-    "Coffee": "./media/coffee.png",
-    "C4 Energy": "./media/c4.png",
-    "Espresso": "./media/espresso.png",
-    "Black Tea": "./media/black-tea.png",
-    "Green Tea": "./media/green-tea.png",
-    "Pepsi": "./media/pepsi.png",
-    "Coca-Cola": "./media/coca-cola.png",
-    "Red Bull": "./media/red-bull.png",
-    "Monster Energy": "./media/monster.png",
-    "Mountain Dew (Big Gulp)": "./media/big-gulp.png"
-};
+let images = {};
+
+// Fetch the images JSON asynchronously
+async function loadImages() {
+    try {
+        const response = await fetch('./images.json');
+        images = await response.json();
+        console.log('Images loaded:', images);
+    } catch (error) {
+        console.error('Error loading images:', error);
+    }
+}
         
         // Function to add a new dropdown dynamically
         let dropdownCount = 0;
@@ -30,14 +29,14 @@ var images = {
             
                 // Fetch data and populate options
                 fetch('./drinks.json')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(function(item) {
-                var optionElement = document.createElement("option");
-                optionElement.value = item.value;
-                optionElement.text = item.text;
-                newSelect.add(optionElement);
-            });
+                    .then(response => response.json())
+                    .then(data => {
+                        data.forEach(function(item) {
+                            var optionElement = document.createElement("option");
+                            optionElement.value = item.value;
+                            optionElement.text = item.text;
+                            newSelect.add(optionElement);
+                        });
     
             // Add the populated dropdown to the container
             dropdownContainer.appendChild(document.createElement("br")); // Line break
@@ -76,31 +75,23 @@ var images = {
 
 
 
-        // Function to update the image based on selected item for a specific dropdown
         function updateImage(index) {
-            console.log("Looking for element:", "item-list-" + index);
-            var itemList = document.getElementById("item-list-" + index);
-            
-            
-            // Get the text of the selected option
-            var selectedItem = itemList.options[itemList.selectedIndex].text;
-            var itemImage = document.getElementById("item-image-" + index);
-
-            console.log("Selected item (text):", selectedItem);
-            console.log("Image path being set:", images[selectedItem]);
-
-            // Set the image source to the corresponding image URL
+            const itemList = document.getElementById("item-list-" + index);
+            const selectedItem = itemList.options[itemList.selectedIndex].text;
+            const itemImage = document.getElementById("item-image-" + index);
+        
             if (images[selectedItem]) {
-                itemImage.src = images[selectedItem];  // Set the correct image
-                console.log("Image src after update:", itemImage.src);
+                itemImage.src = images[selectedItem];
             } else {
-                itemImage.src = '';  // Clear image if item not found
+                itemImage.src = ''; // Clear image if item not found
             }
         }
-        // Initialize the first image on page load
-        window.onload = function() {
-            addDropdown();
-            updateImage(0);
+        
+        // Initialize the page
+        window.onload = async function () {
+            await loadImages(); // Load images first
+            addDropdown(); // Add the first dropdown
+            updateImage(0); // Update the image for the first dropdown
         };
         
 
