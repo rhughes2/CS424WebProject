@@ -12,7 +12,7 @@ async function loadImages() {
 
 let dropdownCount = 0;
 function addDropdown() {
-    if (dropdownCount < 5) {
+    if (dropdownCount < 100) {
         const dropdownContainer = document.getElementById("dropdown-container");
 
         const dropdownWrapper = document.createElement("div");
