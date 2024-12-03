@@ -1,0 +1,225 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables for Dark Coffee Color Palette */
+:root {
+    --primary-color: #3e2723; /* Darker Brown for Primary Elements */
+    --secondary-color: #5d4037; /* Medium Dark Brown */
+    --accent-color: #4e342e; /* Dark Brown Accent */
+    --background-color: #efebe9; /* Light Cream Background */
+    --text-color: #ffffff; /* White for text on dark backgrounds */
+    --button-hover: #6d4c41; /* Hover Color for Buttons */
+    --header-footer-bg: rgba(0, 0, 0, 0.3); /* More Transparent Header and Footer */
+    --header-footer-text: #ffffff; /* White text for Header/Footer */
+    --form-border: #5d4037; /* Medium Dark Brown Border */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+/* Header Styling */
+header {
+    background-color: var(--header-footer-bg);
+    color: var(--header-footer-text);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Adds a slight blur for transparency effect */
+}
+
+#icon {
+    margin-right: 10px;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--header-footer-text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Site Title in Main */
+.site-title-body {
+    text-align: left;
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--text-color); /* Large White Text */
+    margin-bottom: 20px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('./media/coffee-background.jpg'); /* Placeholder background image */
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    padding: 150px 20px;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--text-color); /* Large White Text for Hero Heading */
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: var(--button-hover);
+}
+
+/* Main Content */
+/* main {
+    padding: 40px;
+    background-image: url('./media/blurred-cafe-background-free-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+    
+} */
+
+/* Section Styling */
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: xx-large;
+    color: #fff;
+}
+
+.about1 {
+    text-align: justify;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    color: #fff;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--header-footer-bg);
+    color: var(--header-footer-text);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Button Styling */
+button {
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+
+/* Item Image Styling */
+.item-image {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+/* Dropdown Container Styling */
+#dropdown-container {
+    margin-bottom: 20px;
+}
+
+#dropdown-container label {
+    color: var(--text-color); 
+}
+
+#dropdown-container select {
+    padding: 10px;
+    border: 1px solid var(--form-border); /* Light Orange Border */
+    border-radius: 5px;
+    background-color: #fff;
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+#dropdown-container select:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid var(--form-border); /* Light Orange Border */
+    border-radius: 5px;
+    width: 100%;
+    background-color: #fff; /* White Background for Inputs */
+    color: var(--text-color);
+}
+
+form input:focus, form textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+/* Result Styling */
+#result {
+    text-align: center;
+}
+
+#total-display {
+    font-size: xx-large;
+    color: var(--text-color);
+}

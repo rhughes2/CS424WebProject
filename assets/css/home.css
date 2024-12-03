@@ -1,0 +1,151 @@
+nav{
+    background-color: #70382594;
+}
+
+nav button{
+    padding: 10px 12px;
+    background-color: transparent;
+    color: #fafad2;
+    border: 1px solid #fafad2;
+    font-size: 14px;
+}
+
+nav button:hover {
+    color: #703825;
+    background-color: #fafad2;
+    box-shadow: none;
+}
+
+section button{
+    padding: 10px 12px;
+    color: #703825;
+    background-color: #fafad2;
+    box-shadow: none;
+    font-size: 14px;
+    border: 1px solid transparent;
+}
+section button:hover{
+    background-color: transparent;
+    color: #fafad2;
+    border: 1px solid #fafad2;
+}
+
+main {
+    flex: 1;
+    padding: 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom:0px ;
+}
+
+.banner{
+    background-image: url('../images/c2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.banner-content{
+    background-color: #7038255c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 62px 24px;
+    padding-top: 90px;
+}
+
+.banner .logo{
+    font-size: 128px;
+    line-height: initial;
+}
+
+.section{
+    display: flex;
+    align-items: center;
+}
+
+.section .image {
+    overflow: hidden;
+    width: 50%;
+}
+
+.section .image img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.section .content{
+    width: 50%;
+    color: white;
+    padding: 24px;
+    text-align: center;
+}
+.section .content h2{
+    font-size: 36px;
+}
+.section .content p{
+    font-size: 22px;
+}
+.section .content ul{
+    list-style: none;
+    margin-top: 12px;
+}
+.section .content ul li{
+   margin-bottom: 12px;
+}
+
+.about-section{
+    background-color: #d10339;
+}
+
+.coffee-type-section{
+    background-color: #0b7a55;
+}
+.coffee-world-section{
+    background-color: #ff8f24;
+}
+
+.coffee-funfact-section{
+    background-color: #00a89d;
+}
+
+.coffee-economy-section{
+    background-color: #ee5179;
+}
+
+.coffee-history-section{
+    background-color: #f1714d;
+}
+
+.coffee-plant-section{
+    background-color: #7ba734;
+}
+.coffee-env-section{
+    background-color: #2d1d2b;
+}
+
+.social-icons-section{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer{
+    background-color: white;
+}
+
+footer a{
+    color: black;
+}
+
+footer .copy-rights{
+    text-align: center;
+    width: 100%;
+    color: black;
+    margin-top: 10px;
+}
+
