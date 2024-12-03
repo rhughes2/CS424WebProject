@@ -144,6 +144,17 @@ footer {
 }
 
 
+/* Result Styling */
+#result {
+    text-align: center;
+}
+
+#total-display {
+    font-size: xx-large;
+    color: var(--text-color);
+}
+
+
 @media (max-width: 768px) {
     h1 {
         font-size: 100px;
