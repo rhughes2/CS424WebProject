@@ -129,7 +129,6 @@ section button:hover {
 
 #dropdown-container select {
     color: black; 
-    background: transparent;
     border: 1px solid #ccc;
     padding: 8px;
     border-radius: 5px;
