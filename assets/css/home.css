@@ -250,3 +250,36 @@ footer .copy-rights{
     }
 }
 
+.social-icons-section {
+    display: flex;
+    justify-content: center; /* Centers icons horizontally */
+    align-items: center; /* Aligns icons vertically */
+    gap: 15px; /* Adds space between icons */
+    margin-top: 20px; /* Adds space above the icons */
+  }
+  
+  .social-icons-section a {
+    display: inline-flex; /* Ensures icons are inline-flex for proper alignment */
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Removes underline from links */
+  }
+  
+  .social-icons-section a i {
+    font-size: 32px; /* Icon size */
+    color: #000; /* Default color for icons */
+    transition: color 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .social-icons-section a i:hover {
+    color: #ff5722; /* Hover color */
+  }
+ 
+  .social-icons-section a i:hover {
+    color: #1DB954; /* Spotify green for Spotify */
+  }
+  .social-icons-section a.pinterest i:hover {
+    color: #E60023; /* Pinterest red for Pinterest */
+  }
+    
+
