@@ -24,6 +24,7 @@ section button{
     font-size: 14px;
     border: 1px solid transparent;
 }
+
 section button:hover{
     background-color: transparent;
     color: #fafad2;
@@ -147,5 +148,105 @@ footer .copy-rights{
     width: 100%;
     color: black;
     margin-top: 10px;
+}
+
+
+/* General Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    nav button {
+        margin: 5px 0; /* Add spacing between buttons */
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    .banner {
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+    }
+
+    .banner .logo {
+        font-size: 64px; /* Reduce logo size for mobile */
+    }
+
+    .banner-content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .section {
+        flex-direction: column; /* Stack image and content vertically */
+    }
+
+    .section .image,
+    .section .content {
+        width: 100%; /* Full width for both image and content */
+        padding: 10px;
+    }
+
+    .section .content h2 {
+        font-size: 28px; /* Adjust heading size */
+    }
+
+    .section .content p {
+        font-size: 16px; /* Adjust paragraph size */
+    }
+
+    .section .content ul {
+        padding: 0;
+    }
+
+    .section .content ul li {
+        font-size: 14px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+    }
+
+    footer .social-icons-section {
+        flex-wrap: wrap; /* Allow wrapping for social icons */
+        gap: 5px;
+    }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    nav button {
+        font-size: 10px; /* Further reduce button font size */
+        padding: 8px; /* Smaller padding for buttons */
+    }
+
+    .banner .logo {
+        font-size: 48px; /* Reduce logo size even further */
+    }
+
+    .banner-content {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .section .content h2 {
+        font-size: 24px; /* Adjust heading size */
+    }
+
+    .section .content p {
+        font-size: 14px; /* Adjust paragraph size */
+    }
+
+    .social-icons-section {
+        flex-direction: column; /* Stack icons vertically */
+        gap: 8px;
+    }
+
+    footer {
+        font-size: 12px; /* Adjust footer font size */
+    }
 }
 

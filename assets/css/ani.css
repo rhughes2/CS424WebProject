@@ -41,7 +41,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Added background for visibility */
+    background-color: #70382594; /* Added background for visibility */
     z-index: 10;
 }
 
@@ -60,17 +60,16 @@ nav .button-container {
 }
 
 nav button {
-    background: transparent;
-    color: lightgoldenrodyellow;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 5px 10px;
+    padding: 10px 12px;
+    background-color: transparent;
+    color: #fafad2;
+    border: 1px solid #fafad2;
+    font-size: 14px;
 }
 
 nav button:hover {
-    color: #6f4e37;
-    background-color: transparent;
+    color: #703825;
+    background-color: #fafad2;
     box-shadow: none;
 }
 
@@ -100,18 +99,18 @@ h2 {
 }
 
 section button {
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    margin: 10px 0;
+    padding: 10px 12px;
+    color: #703825;
+    background-color: #fafad2;
+    box-shadow: none;
+    font-size: 14px;
+    border: 1px solid transparent;
 }
 
 section button:hover {
-    background-color: #6f4e37;
-    color: white;
+    background-color: transparent;
+    color: #fafad2;
+    border: 1px solid #fafad2;
 }
 
 #dropdown-container {
