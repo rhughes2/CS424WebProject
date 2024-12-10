@@ -1,5 +1,5 @@
-# Caffiene.me
-A web app that calculates total caffiene of drinks
+# Caffeine.me
+A web app that calculates total caffeine of drinks
 
 ## Must TODO
 - Reconsider Data Storage
@@ -9,6 +9,6 @@ A web app that calculates total caffiene of drinks
 
 ### Maybe TODO
   - Add Login Support
-  - Add Mounthly recap email to accounts
-  - Add abilty to share total socre on social media
+  - Add Monthly recap email to accounts
+  - Add ability to share total score on social media
 
